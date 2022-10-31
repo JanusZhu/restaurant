@@ -1,7 +1,116 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(./font/JosefinSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: myFirstFont2;
+  src: url(./font/Oswald-Bold.ttf);
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html,
+body {
+  font-family: myFirstFont2;
+}
+
+h1 {
+  font-size: 4rem;
+  font-family: myFirstFont;
+}
+
+body {
+  background-image: url(./img/background.png);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.header {
+  padding: 2rem;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: azure;
+  display: grid;
+  grid-template-rows: repeat(autofill, auto);
+  justify-items: center;
+  gap: 30px;
+}
+
+.navbar {
+  color: antiquewhite;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.navbar btn:hover {
+  transform: translateY(-5px);
+}
+
+.navbar .active {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+#content {
+  color: azure;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 5% 10%;
+  padding: 30px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.chef {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.home-desc {
+  line-height: 2;
+  padding: 0 5%;
+}
+
+.food {
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: repeat(autofill, auto);
+  justify-items: center;
+}
+
+.name {
+  font-weight: 500;
+  font-size: large;
+}
+
+.map {
+  width: 50%;
+}
+.footer {
+  width: auto;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: azure;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  text-decoration-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
